@@ -11,7 +11,7 @@ export const ContactContextProvider = ({ children }) => {
 
   const getContacts = async () => {
     try {
-      const responces = await axios.get(`${baseUrl}/contact/get`);
+      const responces = await axios.get(`${baseUrl}/api/v1/contact/get`);
       if (responces.data.success) {
         setContacts(responces.data.allContacts);
       }
@@ -22,7 +22,7 @@ export const ContactContextProvider = ({ children }) => {
 
   const addNewContact = async (data) => {
     try {
-      const responces = await axios.post(`${baseUrl}/contact/add`, data);
+      const responces = await axios.post(`${baseUrl}/api/v1/contact/add`, data);
       if (responces.data.success) {
         getContacts();
         setContactForm(false);
