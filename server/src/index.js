@@ -12,10 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin:
-      process.env.NODE_ENV === "dev"
+      process.env.NODE_ENV === "development"
         ? "http://localhost:5173"
         : process.env.ORIGIN,
-    methods: ["GET,POST"],
+    methods: ["GET", "POST"],
     credentials: true,
   })
 );
