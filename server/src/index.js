@@ -20,6 +20,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("Api is running successfully");
+});
+
 app.use("/api/v1/contact", contactRoute);
 
 connectDB();
