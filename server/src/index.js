@@ -15,7 +15,7 @@ app.use(
       process.env.NODE_ENV === "development"
         ? "http://localhost:5173"
         : process.env.ORIGIN,
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "OPTIONS"],
     credentials: true,
   })
 );
